@@ -7,5 +7,44 @@
 
 
 body{
+    margin: 0 auto;
     background: var(--background-standard-color);
+}
+
+header {
+    backdrop-filter: blur(8px);
+    width: 100%;
+    opacity: 1;
+}
+
+nav{
+    opacity: 1;
+}
+
+.special-frame{
+    -webkit-filter:blur(100px);
+    background: linear-gradient(180deg, var(--elements-color, #ff520e) -43%, var(--elements-color, rgb(255, 82, 14)) 100%);
+    filter: blur(100px);
+    flex: none;
+    height: 212px;
+    opacity: .5;
+    overflow: visible;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1047px;
+    z-index: 1;
+}
+
+.header-frame{
+    z-index: 2;
+    position: sticky;
+    width: 100%;
+    height: auto;
+    flex: none;
+    top: 0;
+}
+
+.flex-variant {
+    display: contents;
 }
