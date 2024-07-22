@@ -1,12 +1,13 @@
 :root {
-    --background-standard-color: rgb(15,15,15);
-    --background-additional-color: rgb(13,13,13);
-    --text-color: rgb(255,255,255);
-    --elements-color: rgb(255,82,14);
+    --background-standard-color: rgb(15, 15, 15);
+    --background-additional-color: rgb(13, 13, 13);
+    --text-color: rgb(255, 255, 255);
+    --elements-color: rgb(129, 60, 255);
+    --elements-additional-color: rgb(149, 104, 239);
 }
 
 
-body{
+body {
     margin: 0 auto;
     background: var(--background-standard-color);
 }
@@ -17,13 +18,20 @@ header {
     opacity: 1;
 }
 
-nav{
+nav {
     opacity: 1;
+    padding: 20px 0px;
 }
 
-.special-frame{
-    -webkit-filter:blur(100px);
-    background: linear-gradient(180deg, var(--elements-color, #ff520e) -43%, var(--elements-color, rgb(255, 82, 14)) 100%);
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.special-frame {
+    -webkit-filter: blur(100px);
+    background: linear-gradient(180deg, var(--elements-color, rgb(149, 104, 239)) -43%, var(--elements-color, rgb(149, 104, 239)) 100%);
     filter: blur(100px);
     flex: none;
     height: 212px;
@@ -36,7 +44,7 @@ nav{
     z-index: 1;
 }
 
-.header-frame{
+.header-frame {
     z-index: 2;
     position: sticky;
     width: 100%;
@@ -47,4 +55,49 @@ nav{
 
 .flex-variant {
     display: contents;
+}
+
+.navigation {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    .nav-stuff {
+        z-index: 1;
+    }
+    .middle {
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+        .elements:hover{
+            /*color: var(--elements-additional-color);*/
+            transform: translateY(-200px);
+            transition: 1s;
+        }
+        .elements.two {
+            /*display: none;*/
+            transform: translateY(200px);
+        }
+        .elements.two:hover{
+            /*display: block;*/
+            color: var(--elements-additional-color);
+            transform: translateY(0);
+            transition: 0.3s;
+        }
+    }
+
+    .button {
+            border: var(--elements-color) 1px solid;
+            opacity: 1;
+        border-radius: 10px;
+        height: auto;
+        width: auto;
+        background: transparent;
+        .cont {
+            margin: 14px 10px 14px 10px;
+        }
+    }
 }
