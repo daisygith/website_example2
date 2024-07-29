@@ -5,6 +5,7 @@
     --text-addidtional-color: rgb(180, 180, 180);
     --elements-color: rgb(129, 60, 255);
     --elements-additional-color: rgb(149, 104, 239);
+    --elements-additional2-color: rgba(168, 134, 239, 0.64);
     --box-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -453,6 +454,7 @@ ul {
     position: relative;
     width: 23rem;
     z-index: 1;
+    color: yellowgreen;
 }
 
 .content-img {
@@ -473,22 +475,7 @@ ul {
     transition: all .3s ease-in-out;
 }
 
-/*.content.ff:hover {*/
-/*    -webkit-filter: blur(100px);*/
-/*    background: linear-gradient(180deg, var(--elements-color, rgb(149, 104, 239)) -43%, var(--elements-color, rgb(149, 104, 239)) 100%);*/
-/*    filter: blur(100px);*/
-/*    flex: none;*/
-/*    height: 212px;*/
-/*    opacity: .5;*/
-/*    overflow: visible;*/
-/*    position: absolute;*/
-/*    !*right: 0;*!*/
-/*    top: 0;*/
-/*    width: 1047px;*/
-/*    !*z-index: 1;*!*/
-/*}*/
-
-.logo-work:hover {
+.logo-work.transform {
     transform: translateY(0) scale(1.25);
 }
 
@@ -504,15 +491,31 @@ ul {
     transition: all .3s ease-in-out;
 }
 
-.special-frame.logo:hover {
+.special-frame.logo.transform {
     opacity: 0.5;
 }
 
-/*.special-frame.logo:hover::after {*/
-/*    opacity: 0;*/
-/*}*/
+.content.boxes.opinion{
+    background-color: cornflowerblue;
+    width: 388px;
+    height: 200px;
+}
 
+.checked {
+    color: var(--elements-color);
+}
 
+.content-style.profile {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 
 /*cursors*/
 div.cursors div {
@@ -525,29 +528,31 @@ div.cursors div {
     border-radius: 50%;
     z-index: 10000;
     pointer-events: none;
-    transform: translate(-80%, -80%);
+    transition: .4s, left .1s, left .1s, opacity .5s;
+    transform: translate(-50%, -50%)
+}
+
+div.cursors.active div{
+    background-color: var(--elements-additional2-color);
+    width: auto;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--elements-color);
 }
 
 div.cursors div span {
-    color: var(--text-color);
-    position: absolute;
-    top: 0;
-    left: 40px;
-    width: auto;
-
+    color: transparent;
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--elements-color);
-
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 32px;
-
     opacity: 0;
-    transition: opacity 0.5s;
-
 }
 
 div.cursors div span.visible {
     opacity: 1;
+    color: var(--text-color);
 }
+
+
+
