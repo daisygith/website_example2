@@ -458,10 +458,8 @@ ul {
 }
 
 .content-img {
-    /*position: absolute;*/
     border-radius: inherit;
     inset: 0px;
-    /*transition: all .3s ease-in-out;*/
 }
 
 .logo-work {
@@ -568,6 +566,65 @@ ul {
     z-index: -1;
 }
 
+.content-img.team {
+    filter: grayscale();
+    z-index: 1;
+    transition: filter 0.4s ease-in-out;
+}
+
+.content-img.team.transform {
+    opacity: 0.7;
+    filter: none;
+}
+
+button {
+    background-color: var(--elements-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.left {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-images {
+    position: relative;
+    width: 100%;
+    padding: 40px 0px;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.content-style.person{
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    justify-content: center;
+    bottom: 68px;
+}
+
+.text-style.fr.pro,
+.text-style.th.pro {
+    text-align: center;
+}
 
 /*cursors*/
 div.cursors div {
@@ -587,7 +644,7 @@ div.cursors div {
 div.cursors.active div{
     background-color: var(--elements-additional2-color);
     width: auto;
-    height: 40px;
+    height: 34px;
     border-radius: 20px;
     border: 1px solid var(--elements-color);
 }
