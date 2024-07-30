@@ -26,22 +26,30 @@ message.forEach(text => {
     text.addEventListener("mouseover", function (el){
         cursorTag.classList.add("active");
         ballMessage.classList.add("visible");
+        ballMessage.innerHTML = text.getAttribute("data-hover");
+
         let img = el?.currentTarget?.querySelector(".logo-work");
         let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
+
+        let changeColor = el?.currentTarget?.querySelector(".content-img.team");
         img.classList.add("transform");
         specialFrame.classList.add("transform");
-        ballMessage.innerHTML = text.getAttribute("data-hover");
+        changeColor.classList.add("transform");
 
     });
     text.addEventListener("mouseout", function (el){
         ballMessage.classList.remove("visible");
         cursorTag.classList.remove("active");
+
         let img = el?.currentTarget?.querySelector(".logo-work");
         let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
+        let changeColor = el?.currentTarget?.querySelector(".content-img.team");
 
         img.classList.remove("transform");
         specialFrame.classList.remove("transform");
-
+        changeColor.classList.remove("transform");
     });
 })
+
+
 
