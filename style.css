@@ -338,6 +338,7 @@ a {
 
 .text-style.sc {
     font-size: 48px;
+    margin-block-start: 0rem;
 }
 
 .text-style.paragraph.sc {
@@ -392,7 +393,6 @@ a {
     flex-shrink: 0;
     transform: none;
     opacity: 1;
-
 }
 
 .number {
@@ -531,7 +531,6 @@ ul {
 .content-style.profile {
     display: flex;
     flex-direction: row;
-
 }
 
 .avatar{
@@ -547,6 +546,28 @@ ul {
 .avatar-title {
     color: var(--text-color);
 }
+
+.content.sv {
+    /*gap: 12px;*/
+    width: 100%;
+}
+
+.content.second.serv {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-container.serv {
+    width: -webkit-fill-available;
+    padding: 14px 100px 14px 100px;
+}
+
+.special-frame.serv {
+    top: 18rem;
+    left: 2rem;
+    z-index: -1;
+}
+
 
 /*cursors*/
 div.cursors div {
