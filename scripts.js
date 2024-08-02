@@ -59,23 +59,23 @@ let right = document.getElementById("right");
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
 
-    function checkScroll(qualifiedName) {
-        const currentScroll = scrollContainer.scrollLeft;
-        if(currentScroll === 0){
-            leftBtn.setAttribute("disabled", "true");
-            rightBtn.removeAttribute("disabled");
-        } else if (currentScroll === scrollLength){
-            rightBtn.setAttribute("disabled", "true");
-            leftBtn.removeAttribute("disabled");
-        } else {
-            leftBtn.removeAttribute("disabled");
-            rightBtn.removeAttribute("disabled");
-        }
+function checkScroll(qualifiedName) {
+    const currentScroll = scrollContainer.scrollLeft;
+    if (currentScroll === 0) {
+        leftBtn.setAttribute("disabled", "true");
+        rightBtn.removeAttribute("disabled");
+    } else if (currentScroll === scrollLength) {
+        rightBtn.setAttribute("disabled", "true");
+        leftBtn.removeAttribute("disabled");
+    } else {
+        leftBtn.removeAttribute("disabled");
+        rightBtn.removeAttribute("disabled");
     }
+}
 
-    scrollContainer.addEventListener("scroll",checkScroll);
-    window.addEventListener("resize",checkScroll);
-    checkScroll();
+scrollContainer.addEventListener("scroll", checkScroll);
+window.addEventListener("resize", checkScroll);
+checkScroll();
 
 right.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
