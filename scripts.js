@@ -86,19 +86,22 @@ left.addEventListener("click", () => {
     scrollContainer.scrollLeft -= 380;
 });
 
-    // function leftScroll() {
-    //     scrollContainer.scrollBy({
-    //         left: -200,
-    //         behavior: "smooth"
-    //     });
-    // }
-    // function rightScroll() {
-    //     scrollContainer.scrollBy({
-    //         left: -200,
-    //         behavior: "smooth"
-    //     });
-    // }
-    //
-    // leftBtn.addEventListener("click", leftScroll);
-    // rightBtn.addEventListener("click", rightScroll);
-// })
+
+//
+const openQuestion = document.querySelectorAll(".que-item");
+
+
+openQuestion.forEach((element) => {
+    element.addEventListener("click", function (el) {
+        let crossQuestion = el?.currentTarget.querySelector(".cross");
+        let contentQuestion = el?.currentTarget.querySelector(".que-2");
+
+        if (crossQuestion.style.transform === "none") {
+            crossQuestion.style.transform = "rotate(135deg)";
+            contentQuestion.style.display = "block";
+        } else {
+            crossQuestion.style.transform = "none";
+            contentQuestion.style.display = "none";
+        }
+    })
+})
