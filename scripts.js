@@ -13,54 +13,42 @@ const cursorTag = document.querySelector("div.cursors");
 const ball = cursorTag.querySelector("div");
 const ballMessage = cursorTag.querySelector("div span");
 //
-const message=document.querySelectorAll("a[data-hover]");
+const message = document.querySelectorAll("a[data-hover]");
 //
-document.addEventListener("mousemove", function (event){
+document.addEventListener("mousemove", function (event) {
     ball.style.left = event.pageX + "px";
     ball.style.top = event.pageY + "px";
 })
 
 message.forEach(text => {
-    text.addEventListener("mouseover", function (el){
-        cursorTag.classList.add("active");
-        ballMessage.classList.add("visible");
-        ballMessage.innerHTML = text.getAttribute("data-hover");
+        text.addEventListener("mouseover", function (el) {
+            cursorTag.classList.add("active");
+            ballMessage.classList.add("visible");
+            ballMessage.innerHTML = text.getAttribute("data-hover");
 
-        let img = el?.currentTarget?.querySelector(".logo-work");
-        let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
-        let changeColor = el?.currentTarget?.querySelector(".content-img.team");
+            let img = el?.currentTarget?.querySelector(".logo-work");
+            let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
+            let changeColor = el?.currentTarget?.querySelector(".content-img.team");
 
-        img.classList.add("transform");
-        specialFrame.classList.add("transform");
-        changeColor.classList.add("transform");
+            img?.classList.add("transform");
+            specialFrame?.classList.add("transform");
+            changeColor?.classList.add("transform");
 
-    });
-    text.addEventListener("mouseout", function (el){
-        ballMessage.classList.remove("visible");
-        cursorTag.classList.remove("active");
+        });
+        text.addEventListener("mouseout", function (el) {
+            ballMessage.classList.remove("visible");
+            cursorTag.classList.remove("active");
 
-        let img = el?.currentTarget?.querySelector(".logo-work");
-        let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
-        let changeColor = el?.currentTarget?.querySelector(".content-img.team");
+            let img = el?.currentTarget?.querySelector(".logo-work");
+            let specialFrame = el?.currentTarget?.querySelector(".special-frame.logo");
+            let changeColor = el?.currentTarget?.querySelector(".content-img.team");
 
-        img.classList.remove("transform");
-        specialFrame.classList.remove("transform");
-        changeColor.classList.remove("transform");
-    });
-})
-
-//scroll gallery
-// let scrollContainer = document.querySelector(".scroll-images");
-// scrollContainer.addEventListener("wheel", (el) => {
-
-//     el.preventDefault();
-//     scrollContainer.scrollLeft += el.deltaY;
-//     scrollContainer.style.scrollBehavior = "auto";
-// });
-//
-
-
-// document.addEventListener("DOMContentLoaded", function () {
+            img?.classList.remove("transform");
+            specialFrame?.classList.remove("transform");
+            changeColor?.classList.remove("transform");
+        });
+    }
+)
 
 const scrollContainer = document.querySelector(".scroll-images");
 const scrollLength = scrollContainer.scrollWidth - scrollContainer.clientWidth;
