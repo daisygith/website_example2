@@ -173,7 +173,7 @@ a {
     gap: 0px;
     justify-content: center;
     overflow: hidden;
-    padding: 100px 0px 100px 0px;
+    padding: 200px 0px 100px 0px;
     position: relative;
     /*width: 100%;*/
     align-content: center;
@@ -331,6 +331,25 @@ a {
 
 .content.sc {
     gap: 12px;
+}
+
+.slideText{
+    opacity: 0;
+}
+
+.slide-top{
+    animation: slide-bottom 1s ease-in-out forwards;
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .text-page.sc {
