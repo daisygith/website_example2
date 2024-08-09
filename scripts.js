@@ -127,7 +127,6 @@ left.addEventListener("click", () => {
 //
 const openQuestion = document.querySelectorAll(".que-item");
 
-
 openQuestion.forEach((element) => {
     element.addEventListener("click", function (el) {
         let crossQuestion = el?.currentTarget.querySelector(".cross");
@@ -143,28 +142,36 @@ openQuestion.forEach((element) => {
     })
 })
 
-
-//
-const elementsSlide = document.querySelector('.slideText');
-console.log(elementsSlide);
-const observer = new IntersectionObserver(entries => {
-    elementsSlide.classList.toggle('slide-top', entries[0].isIntersecting);
-});
-
-observer.observe(elementsSlide);
-
+//slide-top
+//slideIn
 document.addEventListener("DOMContentLoaded", function () {
+
+    //slide-top
     const elementsSlide = document.querySelectorAll('.slideText');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("slide-top");
-            } else {
-                entry.target.classList.remove("slide-top");
+            if (entry.isIntersecting && !entry.target.classList.contains("slide-bottom")) {
+                entry.target.classList.add("slide-bottom");
             }
         });
-    },);
+    });
     elementsSlide.forEach(el => {
         observer.observe(el);
     });
+
+    //slideIn
+    const slideIn = document.querySelectorAll('.slide-in');
+
+    const observerSlideIn = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !entry.target.classList.contains("slideIn")) {
+                entry.target.classList.add("slideIn");
+            }
+        });
+    });
+    slideIn.forEach(el => {
+        observerSlideIn.observe(el);
+    });
+
 });
+
