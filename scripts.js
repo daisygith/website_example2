@@ -34,6 +34,15 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
 }
 
+// open menu
+const navEl = document.querySelector('.nav-stuff.middle.nav-links');
+const hamburgerEl = document.querySelector('.nav-stuff.button.menu');
+
+hamburgerEl.addEventListener('click', () => {
+    navEl.classList.toggle('main-navigation--open');
+    hamburgerEl.classList.toggle('hamburger--open');
+});
+
 
 //copy logos
 let copy = document.querySelector(".logos-slide").cloneNode(true);
