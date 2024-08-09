@@ -337,7 +337,7 @@ a {
     opacity: 0;
 }
 
-.slide-top{
+.slide-bottom{
     animation: slide-bottom 1s ease-in-out forwards;
 }
 
@@ -365,6 +365,19 @@ a {
 .text-style.paragraph.sc {
     color: var(--text-addidtional-color);
     font-size: 25px;
+}
+
+
+.slideIn {
+    transform: scale(.5);
+    animation: .9s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 .content.th{
