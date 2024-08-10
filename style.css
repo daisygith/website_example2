@@ -9,6 +9,9 @@
     --box-color: rgba(255, 255, 255, 0.1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0 auto;
@@ -19,6 +22,7 @@ body {
     font-size: 22px;
     /*line-height: 10px;*/
     color: #ecf0f1;
+
 }
 
 header {
@@ -60,7 +64,6 @@ a {
     height: auto;
     flex: none;
     top: 0;
-
 }
 
 .flex-variant {
@@ -92,7 +95,6 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 28px;
-
     /*    */
 }
 
@@ -224,6 +226,7 @@ a {
 .nav-stuff.button.menu {
     display: none;
 }
+
 
 .section {
     background-color: var(--background-standard-color);
@@ -930,6 +933,18 @@ div.cursors div span.visible {
     }
 }
 
+@media (max-width: 1340px) {
+
+    .button-container.serv {
+        padding: 14px 30px 14px 64px;
+    }
+
+    .content.ff.footer {
+        margin: 0px 0px 0px 50rem;
+    }
+}
+
+
 @media (max-width: 1220px) {
     body{
         font-size: 20px;
@@ -975,6 +990,13 @@ div.cursors div span.visible {
         width: 88%;
     }
 
+}
+
+@media (max-width: 1025px) {
+
+    .button-container.serv {
+        padding: 14px 30px 14px 36px;
+    }
 }
 
 @media (max-width: 910px) {
@@ -1032,16 +1054,21 @@ div.cursors div span.visible {
 
 }
 
-@media (max-width: 768px) {
-    .content {
-        width: 100%;
-    }
-
+@media (max-width: 860px){
     .content.th {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: normal;
+    }
+    .button-container.serv {
+        padding: 14px 200px 14px 230px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
     }
 
     .content.box-que {
@@ -1059,6 +1086,22 @@ div.cursors div span.visible {
         margin: 0px 0px 0px 0px;
     }
 
+    .button-container.serv {
+        padding: 14px 30px 14px 260px;
+    }
+
+}
+
+@media (max-width: 668px) {
+    .button-container.serv {
+        padding: 14px 30px 14px 220px;
+    }
+}
+
+@media (max-width: 545px) {
+    .button-container.serv {
+        padding: 14px 30px 14px 180px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1087,7 +1130,7 @@ div.cursors div span.visible {
 @media (max-width: 376px) {
 
     .button-container.serv {
-        padding: 11px 0px 14px 96px;
+        padding: 11px 0px 14px 76px;
     }
 
     .content.fr {
