@@ -54,7 +54,7 @@ a {
     right: 0;
     top: 0;
     width: 1047px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .header-frame {
@@ -854,6 +854,7 @@ footer {
     column-gap: 50px;
     flex: auto;
     width: auto;
+    z-index: 10;
 }
 
 .button-container.footer {
