@@ -14,12 +14,14 @@ Using CSS, I created the look of the website.
 
 ### JS 
 
-Scroll on logos 
-Change color in links in header
-Change color in button inscriptions 
-Change dot by cursor to the description -  it depends from the box we hover over
-Open faqs window - change rotate "+" 
-Menu bar - when we want to open website on phone it usefull, because we see all menu.
+In js folder is <b>script.js</b> file in which is code for change some apperance website, for example: 
+
+- Scroll on logos
+- Change color in links in header
+- Change color in button inscriptions
+- Change dot by cursor to the description -  it depends from the box we hover over
+- Open faqs window - change rotate "+"
+- Menu bar - when we want to open website on phone it usefull, because we see all menu.
 
 #### Main page website
 
